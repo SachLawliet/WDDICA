@@ -160,7 +160,7 @@ transform: scale(1.3);
 }
 
 #studio {
-  height: 100vh;
+  height: 90vh;
 }
 
 #marker {
@@ -328,11 +328,6 @@ footer a:hover img{
         height: auto;
         gap: 25px;
     }
-    
-    #studio {
-        height: 90vh;
-    }
-
 }
 
 @media (max-width: 500px) {
