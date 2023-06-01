@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Future is Now</title>
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+<script src="app.js" defer></script>
+
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js'></script>
+<link href='https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css' rel='stylesheet' />
+
+
+<body>
+
+    <div id='title'>
+      <img src="media/pcublanc.png">
+      <div id="summary">
+            <a href="#brief" style="text-decoration-color: black;">Introduction</a>
+            <a href="#schedule" style="text-decoration-color: black;">Schedule</a>
+            <a href="#speakers" style="text-decoration-color: black;">Speakers</a>
+            <a href="#studio" style="text-decoration-color: black;">Location</a>
+            <a href="#contact" style="text-decoration-color: black;">Register</a>
+      </div>
+      <section id="hook">
+      <h1>THE FUTURE IS NOW</h1>
+      <h2>School of Media and IT Mini Conference in AI</h2>
+      <h3>26.5.2023 9:00am – 18:00pm</h3>
+      </section>
+      <svg id="drawing"></svg>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.5.1/snap.svg-min.js"></script>
+      <script src="app.js"></script>
+
+    </div>
+  
+  <div id="brief">
+
+    <p>Explore the diverse applications of AI, the challenges and opportunities that come with its
+      development, and how it can be leveraged to make a positive impact on society. We look forward to engaging
+      in meaningful conversations that will further the progress of AI and its potential to shape the future.
+    </p>
+
+    <img src="media/robot.jpg">
+
+
+  </div>
+
+  <div id="schedule">
+    <h3>Key topic of conference:</h3>
+    <table id="timetable">
+      <tbody>
+        <tr>
+          <td style="font-weight: bold;">Hour</td>
+          <td style="font-weight: bold;">Speaker</td>
+          <td style="font-weight: bold;">Event</td>
+        </tr>
+        <tr>
+          <td>8:00am - 9:00am</td>
+          <td></td>
+          <td>Doors open and registration</td>
+        </tr>
+        <tr>
+          <td>9:00am - 9:30am</td>
+          <td></td>
+          <td>Opening remarks</td>
+        </tr>
+        <tr>
+          <td>9:30am - 10:30am</td>
+          <td><a href="#Mark">Mark Anderson</a></td>
+          <td>Introduction to AI</td>
+        </tr>
+        <tr>
+          <td>10:30am - 11:30am</td>
+          <td><a href="#Sarah">Sarah Johnson</a></td>
+          <td>AI Applications in Healthcare</td>
+        </tr>
+        <tr>
+          <td>11:30am - 12:30pm</td>
+          <td></td>
+          <td>Workshop 1: Developing AI Algorithms</td>
+        </tr>
+        <tr>
+          <td>12:30pm - 1:30pm</td>
+          <td></td>
+          <td>Lunch</td>
+        </tr>
+        <tr>
+          <td>1:30pm - 2:30pm</td>
+          <td><a href="#Jennifer">Jennifer Williams</a></td>
+          <td>Machine Learning</td>
+        </tr>
+        <tr>
+          <td>2:30pm - 3:30pm</td>
+          <td><a href="#Andrew">Andrew Smith</a></td>
+          <td>Natural Language Processing</td>
+        </tr>
+        <tr>
+          <td>3:30pm - 4:30pm</td>
+          <td></td>
+          <td>Workshop 2: Implementing AI in Business</td>
+        </tr>
+        <tr>
+          <td>4:30pm - 5:30pm</td>
+          <td><a href="#Rebecca">Rebecca Jones</a></td>
+          <td>AI and the Future</td>
+        </tr>
+        <tr>
+          <td>5:30pm - 6:00pm</td>
+          <td></td>
+          <td>Closing remarks and networking</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <img src="media/clock.gif">
+  </div>
+
+  <section id="speakers">
+    <div id="list">
+      <div id="Mark">
+        <img src="media/mark.png">
+        <h4>Mark Anderson</h4>
+        <p>Do qui consequat dolor eiusmod esse labore cillum est eu quis duis. Tempor ipsum dolore qui enim excepteur do.</p>
+      </div>
+      <div id="Sarah">
+        <img src="media/sarah.png">
+        <h4>Sarah Johnson</h4>
+        <p>Do qui consequat dolor eiusmod esse labore cillum est eu quis duis. Tempor ipsum dolore qui enim excepteur do.
+        </p>
+      </div>
+      <div id="Jennifer">
+        <img src="media/jennifer.png">
+        <h4>Jennifer Williams</h4>
+        <p>Do qui consequat dolor eiusmod esse labore cillum est eu quis duis. Tempor ipsum dolore qui enim excepteur do.</p>
+      </div>
+      <div id="Andrew">
+        <img src="media/andrew.png">
+        <h4>Andrew Smith</h4>
+        <p>Do qui consequat dolor eiusmod esse labore cillum est eu quis duis. Tempor ipsum dolore qui enim excepteur do.</p>
+      </div>
+      <div id="Rebecca">
+        <img src="media/rebecca.png">
+        <h4>Rebecca Jones</h4>
+        <p>Do qui consequat dolor eiusmod esse labore cillum est eu quis duis. Tempor ipsum dolore qui enim excepteur do.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="studio">
+
+  </section>
+
+
+  <div id='map'></div>
+  <script>
+    mapboxgl.accessToken = 'pk.eyJ1Ijoic2FjaGxhd2xpZXQiLCJhIjoiY2xmNnRpMGQ1MXEwbDNvcjBrNXlzMGRoYSJ9.IOg3gIp_yIDMmvxj-h4kUw'
+
+    let loc = [14.432920703901994, 50.0872586083456];
+
+    let map = new mapboxgl.Map({
+      container: 'studio',
+      center: loc,
+      zoom: 14,
+      style: 'mapbox://style/mapbox/dark-v10'
+    });
+
+    map.scrollZoom.disable();
+    map.addControl(new mapboxgl.NavigationControl());
+
+    let popup = new mapboxgl.Popup({ offset: 70 })
+      .setText('Hybernská 24, 110 00 Nové Město')
+
+    let marker = document.createElement('div');
+    marker.id = 'marker';
+
+    new mapboxgl.Marker(marker, { anchor: 'bottom' })
+      .setLngLat(loc)
+      .addTo(map)
+      .setPopup(popup);
+  </script>
+
+  <section id="contact">
+    <h2>Registration form</h2>
+    <form id="form">
+      <div>
+        <label for="email">E-mail</label>
+        <input type="email" name="email" id="email" required placeholder="name@email.com">
+      </div>
+      <div>
+        <label for="name">Name</label>
+        <textarea name="name" id="name" required placeholder="Enter your name"></textarea>
+      </div>
+      <div>
+        <button type="reset" id="reset">Reset</button>
+        <button type="submit" id="submit">Register</button>
+      </div>
+    </form>
+
+  </section>
+
+  <footer>
+    <div id="logo">
+      <img src="media/pcu.png" alt="Prague City University">
+    </div>
+    <ul>
+      <li><a href="https://www.facebook.com/PragueCityUniversity" target="_blank"><img
+            src="media/icon-facebook.svg"></a></li>
+      <li><a href="https://www.instagram.com/praguecityuniversity/" target="_blank"><img
+            src="media/icon-instagram.svg"></a></li>
+      <li><a href="https://twitter.com/PragueCityUni" target="_blank"><img src="media/icon-twitter.svg"></a></li>
+      <li><a href="https://www.youtube.com/channel/UCtJM41jXN0JSVFM2pxuAzGw" target="_blank"><img
+            src="media/icon-youtube.svg"></a></li>
+      <li><a href="https://www.linkedin.com/school/prague-city-university/" target="_blank"><img
+            src='media/linkedin.svg'></a></li>
+      <li><a href="https://www.flickr.com/photos/praguecityuniversity/albums" target="_blank"><img
+            src="media/flickr.svg"></a></li>
+    </ul>
+  </footer>
+
+</body>

@@ -1,0 +1,357 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    color: aliceblue;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.titles {
+    font-size: 3rem;
+    padding: 3rem;
+    text-align: center;
+}
+
+#summary {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: row;
+    font-size: 1rem;
+    gap: 1.5rem;
+    padding: 3rem;
+    font-weight: bold;
+}
+
+#summary a{
+    transition: all 0.3s;
+}
+
+#summary a:hover {
+transform: scale(1.3);
+}
+
+#title {
+    background-color: #000;
+    height: 100vh;
+}
+
+#title img {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 12%;
+    margin: 3rem;
+}
+
+#drawing {
+    width: 100%;
+    height: 150vh;
+}
+
+
+#hook {
+    text-align: center;
+    position: absolute;
+    top: 35%;
+    left: 28%;
+}
+
+#title h1{
+    padding: 2rem;
+    font-size: 4rem;
+}
+
+#title h2{
+    padding: 1.5rem;
+    font-size: 2rem;
+}
+
+#title h3{
+    padding: 2rem;
+    font-size: 1.5rem;
+}
+
+#brief{
+    font-size: 1.5rem;
+    background-image: linear-gradient(to bottom, #000, #1f1f1f);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#brief :nth-child(1) {
+    margin: 4rem;
+    font-size: 1.8rem;
+}
+
+#brief img {
+    margin: 4rem;
+    width: 33%;
+    height: auto;
+}
+
+#schedule {
+    background-image: linear-gradient(to bottom, #1f1f1f, #000);
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    gap: 15px;
+}
+
+#timetable {
+    display: grid;
+    border-collapse: collapse;
+}
+  
+#timetable th,
+#timetable td {
+    border: 1px solid #ccc;
+    padding: 12px;
+    text-align: center;
+}
+
+#schedule img{
+    width: 25%; 
+}
+
+#speakers {
+    background-image: linear-gradient(to bottom, #000, #222);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    padding: 2rem;
+}
+
+
+#list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+}
+
+#list div {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    max-width: 300px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#list img {
+    border-radius: 50%;
+}
+
+#studio {
+  height: 100vh;
+}
+
+#marker {
+  width: 50px;
+  height : 50px;
+  background-image: url(media/pin.png);
+  background-size: cover;
+  cursor: pointer;
+}
+
+.mapboxgl-popup-content {
+    color: black;
+}
+
+#contact {
+    background-image: linear-gradient(to bottom, #222 , #000);
+    padding: 2rem;
+}
+
+#contact h2 {
+    padding: 2rem;
+}
+
+#form {
+    display: block;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+#form div {
+    margin-bottom: 1rem;
+}
+
+#form label {
+    display: block;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 0.8rem;
+}
+
+#form input{
+    font-family: inherit;
+    outline: none;
+}
+
+#name {
+    height: 4rem;
+    resize: vertical;
+}
+
+#name, #email{
+    display: block;
+    font-family: inherit;
+    outline: none;
+    width: 100%;
+    background-color: #444;
+    color:#fff;
+    font-size: 1.2rem;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+::placeholder {
+    color: #888;
+}
+
+#form button {
+    display: inline-block;
+    font-family: inherit;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #aaa;
+    font-size: 0.8rem;
+    padding: 1rem 2rem;
+    background-color: transparent;
+    border: 1px solid #888;
+    cursor: pointer;
+    transition: all 0.3;
+    margin: 0.2rem;
+
+}
+
+#form button#register {
+    background-color: aliceblue;
+}
+
+#form button:hover{
+    transform: scale(1.1);
+}
+
+#form div:last-child {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: flex-end;
+}
+
+footer{
+    background-color: #000;
+    padding: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+#logo img{
+    height: 150px;
+    width: auto;
+}
+
+footer ul {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    
+}
+
+footer li{
+    margin: 1rem;
+}
+
+footer img{
+    width: 4rem;
+    height: 4rem;
+    transition: all 0.3s;
+}
+
+footer a:hover img{
+    transform: scale(1.3)
+}
+
+
+@media (min-width: 1200px) {
+
+
+}
+
+
+@media (max-width: 900px) {
+    html {
+        font-size: 10px;
+    }
+
+    #title img {
+        display: none;
+    }
+    
+    #title {
+        background-color: #000;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #summary {
+        font-size: 15px;
+        position: relative;
+        padding: 3rem;
+    }
+
+    #summary a:hover {
+        transform: scale(1.1);
+        }
+        
+    
+    #schedule {
+        flex-direction: column;
+        height: auto;
+        gap: 25px;
+    }
+
+
+}
+
+@media (max-width: 500px) {
+    #summary {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    #brief {
+        flex-direction: column-reverse;
+    }
+    footer {
+        flex-direction: column;
+    }
+    footer ul{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
